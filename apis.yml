@@ -1,23 +1,63 @@
 aid: awearableapparel
+
 name: Awearableapparel
-description: 'Awearableapparel is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://lynq.io/images/darker-new.jpg
+
+description: 'Awearableapparel, operating as Lynq, provides location-based off‑grid wearable technology that enables real‑time person‑to‑person location sharing up to five miles without reliance on phones, cellular networks, or infrastructure. The platform offers a smart compass, emergency alerts, and a developer API for integrating geolocation services into applications, targeting industries such as safety, logistics, and outdoor recreation. Founded in 2014 and based in Brooklyn, NY, Lynq is a Techstars and HAX alumni with $2.6M total funding.'
+
 url: https://raw.githubusercontent.com/api-evangelist/awearableapparel/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Wearable
+- Location
+- IoT
+- Safety
+- Logistics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/awearableapparel-hosts.yml
+- type: DomainSecurity
+  url: security/awearableapparel-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/awearableapparel
+  url: https://lynq.io
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/awearableapparel
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
